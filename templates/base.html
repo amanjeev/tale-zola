@@ -42,13 +42,13 @@
   {% block header %}
   <nav class="nav">
     <div class="nav-container">
-      <a href="{{ config.base_url | safe }}">
+      <a href="/">
         <h2 class="nav-title">{{ config.title | default(value="Tale-Zola")}}</h2>
       </a>
       <ul>
         {% if config.extra.menu %}
           {% for menu in config.extra.menu %}
-            <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
+            <li><a href="{{ menu.url | safe }}">{{ menu.name }}</a></li>
           {% endfor %}
         {% else %}
           <li><a href="{{ config.base_url | safe }}">Posts</a></li>
