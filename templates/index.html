@@ -5,7 +5,7 @@
 {% block seo -%}
   {{ super() }}
 
-  {%- set home = config.extra.expressions.home | default(value="Home") -%}
+  {%- set home = config.extra.expressions.home | default(value="Blog") -%}
   {% set og_title = home -%}
 
   {% if config.title -%}
